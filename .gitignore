@@ -1,0 +1,40 @@
+# --- Dados pessoais -------------------------------------------------------- #
+# Gravacoes do sinal: batimento cardiaco e dado biometrico, nao versionar.
+*.npz
+
+# Video e imagem de captura contem o seu rosto. Uma vez no historico do git,
+# ficam la para sempre, mesmo que o commit seguinte apague o arquivo.
+*.mov
+*.mp4
+*.avi
+*.mkv
+*.webm
+*.gif
+*.png
+*.jpg
+*.jpeg
+# Excecao: imagens de documentacao (capturas de tela do README) vao aqui.
+!docs/**
+
+# --- Modelos --------------------------------------------------------------- #
+# Baixados na primeira execucao (rppg/roi.py::ensure_model). Sao binarios de
+# dezenas de MB que nunca comprimem por delta: ficariam no historico a toa.
+models/
+
+# --- Python ---------------------------------------------------------------- #
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# --- Ambiente e caches ----------------------------------------------------- #
+.venv/
+venv/
+.env
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# --- macOS ----------------------------------------------------------------- #
+.DS_Store
